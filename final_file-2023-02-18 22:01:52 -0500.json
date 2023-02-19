@@ -13,7 +13,8 @@
                   "arch",
                   "arm",
                   "alpha",
-                  "amp"
+                  "amp",
+                  "ape"
                 ]
               },
               "b": {
@@ -168,7 +169,7 @@
               },
               "t": {
                 "spoken_form": "trap",
-                "alternate_sopken_forms": ["tango", "teek"]
+                "alternate_sopken_forms": ["tango", "teek", "tool"]
               },
               "u": {
                 "spoken_form": "urge",
@@ -286,7 +287,8 @@
                   "cape",
                   "scape",
                   "skip",
-                  "scatter"
+                  "scatter",
+                  "exit"
                 ]
               },
               "home": {
@@ -924,7 +926,12 @@
             "action": {
               "\"{number_string}\"": {
                 "spoken_form": "<user.number_string>",
-                "alternate_sopken_forms": ["numb <user.number_string>"]
+                "alternate_sopken_forms": [
+                  "numb <user.number_string>",
+                  "number <user.number_string>",
+                  "num <user.number_string>",
+                  "<user.number_string> over"
+                ]
               }
             }
           }
@@ -936,7 +943,11 @@
             "action": {
               "\"{abbreviation}\"": {
                 "spoken_form": "(abbreviate | abreviate | brief) {user.abbreviation}",
-                "alternate_sopken_forms": ["<user.abbreviation>"]
+                "alternate_sopken_forms": [
+                  "<user.abbreviation>",
+                  "(abbreviate | abreviate | brief) {user.abbreviation} over",
+                  "brief {user.abbreviation}"
+                ]
               }
             }
           }
@@ -960,7 +971,7 @@
               },
               "mode.disable(\"user.gdb\")": {
                 "spoken_form": "disable debug mode",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["debug mode disable"]
               }
             }
           }
@@ -988,23 +999,23 @@
               },
               "user.dictation_format_no_cap()": {
                 "spoken_form": "(no cap | no-caps)",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["(no-caps | no caps)"]
               },
               "user.dictation_format_no_space()": {
                 "spoken_form": "(no space | no-space)",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["(no-space | no space)"]
               },
               "user.dictation_reformat_cap()": {
                 "spoken_form": "cap that",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["cap it"]
               },
               "user.dictation_reformat_no_cap()": {
                 "spoken_form": "(no cap | no-caps) that",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["(no cap | no-caps) it"]
               },
               "user.dictation_reformat_no_space()": {
                 "spoken_form": "(no space | no-space) that",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["(no space | no-space) it"]
               },
               "edit.up()\nrepeat(number_small - 1)": {
                 "spoken_form": "go up <number_small> (line | lines)",
@@ -1064,7 +1075,9 @@
               },
               "user.dictation_insert_raw(format_text)": {
                 "spoken_form": "formatted <user.format_text>",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": [
+                  "formatted <user.format_text> [over]"
+                ]
               },
               "user.formatters_reformat_selection(formatters)": {
                 "spoken_form": "format selection <user.formatters>",
@@ -1072,7 +1085,7 @@
               },
               "user.clear_last_phrase()": {
                 "spoken_form": "scratch that",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["scratch it"]
               },
               "edit.delete()": {
                 "spoken_form": "scratch selection",
@@ -1080,15 +1093,21 @@
               },
               "user.select_last_phrase()": {
                 "spoken_form": "select that",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["select it"]
               },
               "user.dictation_insert(letters)": {
                 "spoken_form": "spell that <user.letters>",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": [
+                  "spell it <user.letters>",
+                  "spell that <user.letters> [over]"
+                ]
               },
               "result = user.formatted_text(letters, formatters)\nuser.dictation_insert_raw(result)": {
                 "spoken_form": "spell that <user.formatters> <user.letters>",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": [
+                  "spell it <user.formatters> <user.letters>",
+                  "spell that <user.formatters> <user.letters> [over]"
+                ]
               },
               "user.dictation_insert(user.text)": {
                 "spoken_form": "escape <user.text>",
@@ -1104,11 +1123,11 @@
             "action": {
               "speech.disable()": {
                 "spoken_form": "go to sleep [<phrase>]",
-                "alternate_sopken_forms": ["drowse"]
+                "alternate_sopken_forms": []
               },
               "speech.enable()": {
                 "spoken_form": "wake up",
-                "alternate_sopken_forms": ["hello computer"]
+                "alternate_sopken_forms": []
               }
             }
           }
@@ -1136,11 +1155,11 @@
             "action": {
               "mode.disable(\"sleep\")\nmode.disable(\"command\")\nmode.enable(\"dictation\")\nuser.code_clear_language_mode()\nmode.disable(\"user.gdb\")": {
                 "spoken_form": "dictation mode",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["digo"]
               },
               "mode.disable(\"sleep\")\nmode.disable(\"dictation\")\nmode.enable(\"command\")": {
                 "spoken_form": "command mode",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["comi"]
               }
             }
           }
@@ -1156,18 +1175,30 @@
               },
               "user.switcher_hide_running()\nuser.history_disable()\nuser.homophones_hide()\nuser.help_hide()\nuser.mouse_sleep()\nspeech.disable()\nuser.engine_sleep()": {
                 "spoken_form": "sleep all [<phrase>]",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["snore [<phrase>]"]
               },
               "speech.disable()": {
                 "spoken_form": "talon sleep [<phrase>]",
                 "alternate_sopken_forms": [
-                  "red light [<phrase>]",
-                  "drowsy [<phrase>]"
+                  "sleepeth [<phrase>]",
+                  "drowse",
+                  "only mouse mode",
+                  "drowse [<phrase>]",
+                  "drowsing",
+                  "sleepy",
+                  "(talon sleep | drouse | hello hello) [<phrase>]",
+                  "(snows | snooze)",
+                  "snore [<phrase>]"
                 ]
               },
               "speech.enable()": {
                 "spoken_form": "talon wake",
-                "alternate_sopken_forms": ["green light", "wakey wakey"]
+                "alternate_sopken_forms": [
+                  "waketh",
+                  "wakey wakey",
+                  "(talon wake | voice mode on)",
+                  "holy guacamole"
+                ]
               }
             }
           }
@@ -1191,7 +1222,11 @@
             "action": {
               "user.open_url(website)": {
                 "spoken_form": "open {user.website}",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": [
+                  "go {user.website}",
+                  "webby {user.website}",
+                  "serf too {user.website}"
+                ]
               },
               "user.search_with_search_engine(search_engine, user.text)": {
                 "spoken_form": "{user.search_engine} hunt <user.text>",
@@ -1201,7 +1236,10 @@
               },
               "text = edit.selected_text()\nuser.search_with_search_engine(search_engine, text)": {
                 "spoken_form": "{user.search_engine} (that | this)",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": [
+                  "{user.search_engine} this",
+                  "{user.search_engine} hunt (that | this)"
+                ]
               }
             }
           }
@@ -1225,7 +1263,7 @@
             "action": {
               "edit.zoom_in()": {
                 "spoken_form": "zoom in",
-                "alternate_sopken_forms": ["collapse"]
+                "alternate_sopken_forms": ["collapse", "zoom [in]"]
               },
               "edit.zoom_out()": {
                 "spoken_form": "zoom out",
@@ -1237,23 +1275,38 @@
               },
               "edit.page_up()": {
                 "spoken_form": "scroll up",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["screen up"]
               },
               "edit.page_down()": {
                 "spoken_form": "scroll down",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["screen down"]
               },
               "edit.copy()": {
                 "spoken_form": "copy that",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": [
+                  "copy that | cope it",
+                  "copy (that | it)",
+                  "copy (that | bat)",
+                  "copy [that]"
+                ]
               },
               "edit.cut()": {
                 "spoken_form": "cut that",
-                "alternate_sopken_forms": ["(carve it | carve selection)"]
+                "alternate_sopken_forms": [
+                  "(carve it | carve selection)",
+                  "cut (that | it)",
+                  "cut [that]"
+                ]
               },
               "edit.paste()": {
                 "spoken_form": "(pace | paste) that",
-                "alternate_sopken_forms": ["(pace | paste) it"]
+                "alternate_sopken_forms": [
+                  "(pace | paste) it",
+                  "(pace | paste) (that | it)",
+                  "paste (that | it)",
+                  "paste that",
+                  "pasty"
+                ]
               },
               "edit.paste()\nkey(enter)": {
                 "spoken_form": "(pace | paste) enter",
@@ -1263,10 +1316,14 @@
                 "spoken_form": "undo that",
                 "alternate_sopken_forms": [
                   "revert that",
+                  "revert",
                   "nope",
                   "undo it",
                   "undo that | nope",
-                  "(undo that | nope)"
+                  "undo (that | it)",
+                  "undo [that]",
+                  "(undo that | nope)",
+                  "nope | undo that"
                 ]
               },
               "edit.redo()": {
@@ -1274,14 +1331,19 @@
                 "alternate_sopken_forms": [
                   "actually yes",
                   "redo it",
-                  "(redo that | yes indeed)"
+                  "redo that | yup",
+                  "redo (that | it)",
+                  "redo [that]",
+                  "(redo that | yes indeed)",
+                  "(read do | redo) that"
                 ]
               },
               "edit.paste_match_style()": {
                 "spoken_form": "paste match",
                 "alternate_sopken_forms": [
                   "(pace | paste) plain",
-                  "(pace | paste) match style"
+                  "(pace | paste) match style",
+                  "paste (match | raw)"
                 ]
               },
               "edit.save()": {
@@ -1289,8 +1351,10 @@
                 "alternate_sopken_forms": [
                   "disc",
                   "(file | five) save",
+                  "disc | file save",
                   "(disk|file save)",
-                  "disk"
+                  "disk",
+                  "[file] save"
                 ]
               },
               "edit.save_all()": {
@@ -1299,7 +1363,8 @@
                   "disc all",
                   "(file | five) save all",
                   "(disk oliver|file save all)",
-                  "disk oliver"
+                  "disk oliver",
+                  "[file] save all"
                 ]
               },
               "user.insert_between(\" \", \" \")": {
@@ -1328,54 +1393,92 @@
             "action": {
               "edit.find()": {
                 "spoken_form": "find it",
-                "alternate_sopken_forms": ["search it", "find that"]
+                "alternate_sopken_forms": [
+                  "search it",
+                  "find [it]",
+                  "hunt this",
+                  "search"
+                ]
               },
               "edit.find_next()": {
                 "spoken_form": "next one",
-                "alternate_sopken_forms": ["find next"]
+                "alternate_sopken_forms": ["hunt next"]
               },
               "edit.word_left()": {
                 "spoken_form": "go word left",
-                "alternate_sopken_forms": ["pre", "drain", "lord"]
+                "alternate_sopken_forms": [
+                  "pre",
+                  "drain | go word left",
+                  "drain",
+                  "go word left | before",
+                  "go (word (left | previous) | west)",
+                  "go (word left | back)",
+                  "(go word left | stone)"
+                ]
               },
               "edit.word_right()": {
                 "spoken_form": "go word right",
-                "alternate_sopken_forms": ["step", "role"]
+                "alternate_sopken_forms": [
+                  "step | go word right",
+                  "step",
+                  "go word right | after",
+                  "go (word (right | next) | east)",
+                  "go (word right | word)",
+                  "(go word right | step)"
+                ]
               },
               "edit.left()": {
                 "spoken_form": "go left",
-                "alternate_sopken_forms": ["tug", "lease"]
+                "alternate_sopken_forms": ["drill | go left", "tug", "left"]
               },
               "edit.right()": {
                 "spoken_form": "go right",
-                "alternate_sopken_forms": ["push", "ross"]
+                "alternate_sopken_forms": ["push | go right", "push", "right"]
               },
               "edit.up()": {
                 "spoken_form": "go up",
-                "alternate_sopken_forms": ["sauce"]
+                "alternate_sopken_forms": [
+                  "go north | go up",
+                  "up",
+                  "go (up | north)"
+                ]
               },
               "edit.down()": {
                 "spoken_form": "go down",
-                "alternate_sopken_forms": ["dunce"]
+                "alternate_sopken_forms": ["down", "go (down | south)"]
               },
               "edit.line_start()": {
                 "spoken_form": "go line start",
-                "alternate_sopken_forms": ["head", "strike"]
+                "alternate_sopken_forms": [
+                  "go to beginning of line",
+                  "head",
+                  "[go line] start",
+                  "head | go line start",
+                  "go (line start | head)",
+                  "(go line start | pop)"
+                ]
               },
               "edit.line_end()": {
                 "spoken_form": "go way right",
-                "alternate_sopken_forms": ["tail", "struck"]
+                "alternate_sopken_forms": [
+                  "go to end of line",
+                  "tail | go line end",
+                  "tail",
+                  "go way right | [go] east",
+                  "go (line end | tail)",
+                  "(go line end | push)"
+                ]
               },
               "edit.line_start()\nedit.line_start()": {
                 "spoken_form": "go way left",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["go way left | [go] west"]
               },
               "edit.file_end()": {
                 "spoken_form": "go bottom",
                 "alternate_sopken_forms": [
                   "(go | scroll) way down",
                   "(go | scroll) bottom",
-                  "struck out"
+                  "go way down | [go] south"
                 ]
               },
               "edit.file_start()": {
@@ -1383,128 +1486,232 @@
                 "alternate_sopken_forms": [
                   "(go | scroll) way up",
                   "(go | scroll) top",
-                  "strike out"
+                  "go way up | [go] north"
                 ]
               },
               "edit.page_down()": {
                 "spoken_form": "go page down",
-                "alternate_sopken_forms": ["punch"]
+                "alternate_sopken_forms": ["scroll", "[go] page [down]"]
               },
               "edit.page_up()": {
                 "spoken_form": "go page up",
-                "alternate_sopken_forms": ["pinch"]
+                "alternate_sopken_forms": [
+                  "(go page up | punk)",
+                  "[go] page up"
+                ]
               },
               "edit.select_line()": {
                 "spoken_form": "select line",
-                "alternate_sopken_forms": ["take line"]
+                "alternate_sopken_forms": [
+                  "seagull | select line",
+                  "select line | line select",
+                  "(select | cell) line"
+                ]
               },
               "edit.select_all()": {
                 "spoken_form": "select all",
-                "alternate_sopken_forms": ["take all"]
+                "alternate_sopken_forms": [
+                  "select all | all select",
+                  "(select | take) all",
+                  "(select | cell) all"
+                ]
               },
               "edit.extend_left()": {
                 "spoken_form": "select left",
-                "alternate_sopken_forms": ["take lease"]
+                "alternate_sopken_forms": [
+                  "select left | lefts",
+                  "(select | cell) left"
+                ]
               },
               "edit.extend_right()": {
                 "spoken_form": "select right",
-                "alternate_sopken_forms": ["take ross"]
+                "alternate_sopken_forms": [
+                  "select right | rights",
+                  "(select | cell) right"
+                ]
               },
               "edit.extend_line_up()": {
                 "spoken_form": "select up",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": [
+                  "select (up | north)",
+                  "(select | cell) up"
+                ]
               },
               "edit.extend_line_down()": {
                 "spoken_form": "select down",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": [
+                  "select (down | south)",
+                  "(select | cell) down"
+                ]
               },
               "edit.select_word()": {
                 "spoken_form": "select word",
-                "alternate_sopken_forms": ["take word"]
+                "alternate_sopken_forms": ["(select | cell) word"]
               },
               "edit.extend_word_left()": {
                 "spoken_form": "select word left",
-                "alternate_sopken_forms": ["<user.select> lefter", "take lord"]
+                "alternate_sopken_forms": [
+                  "<user.select> lefter",
+                  "select word left | befores",
+                  "select (word (left | previous) | west)",
+                  "(select | cell) word left"
+                ]
               },
               "edit.extend_word_right()": {
                 "spoken_form": "select word right",
-                "alternate_sopken_forms": ["<user.select> writer", "take role"]
+                "alternate_sopken_forms": [
+                  "<user.select> writer",
+                  "select word right | afters",
+                  "select (word (right | next) | east)",
+                  "(select | cell) word right"
+                ]
               },
               "edit.extend_line_start()": {
                 "spoken_form": "select way left",
-                "alternate_sopken_forms": ["take head", "take strike"]
+                "alternate_sopken_forms": [
+                  "select line start",
+                  "take head",
+                  "select (way left | bend)",
+                  "(select | cell) way left"
+                ]
               },
               "edit.extend_line_end()": {
                 "spoken_form": "select way right",
-                "alternate_sopken_forms": ["take tail", "take struck"]
+                "alternate_sopken_forms": [
+                  "select line end",
+                  "take tail",
+                  "select (way right | lend)",
+                  "(select | cell) way right"
+                ]
               },
               "edit.extend_file_start()": {
                 "spoken_form": "select way up",
-                "alternate_sopken_forms": ["take start"]
+                "alternate_sopken_forms": [
+                  "select top",
+                  "select (way up | loft)",
+                  "(select | cell) way up"
+                ]
               },
               "edit.extend_file_end()": {
                 "spoken_form": "select way down",
-                "alternate_sopken_forms": ["take end"]
+                "alternate_sopken_forms": [
+                  "select bottom",
+                  "select (way down | gut)",
+                  "(select | cell) way down"
+                ]
               },
               "edit.indent_more()": {
                 "spoken_form": "indent [more]",
-                "alternate_sopken_forms": ["indent", "move in"]
+                "alternate_sopken_forms": ["indent", "(indent [more] | shove)"]
               },
               "edit.indent_less()": {
                 "spoken_form": "(indent less | out dent)",
-                "alternate_sopken_forms": ["(indent less | dedent)", "move out"]
+                "alternate_sopken_forms": [
+                  "(indent less | dedent)",
+                  "(indent less | out dent | tug)",
+                  "(indent less | out dent | dedent)",
+                  "de dent"
+                ]
               },
               "edit.delete_line()": {
                 "spoken_form": "clear line",
-                "alternate_sopken_forms": ["line delete"]
+                "alternate_sopken_forms": [
+                  "(wipe | delete) line",
+                  "clear line | line clear"
+                ]
               },
               "key(backspace)": {
                 "spoken_form": "clear left",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": [
+                  "(wipe | delete) left",
+                  "clear left | lefts delete"
+                ]
               },
               "key(delete)": {
                 "spoken_form": "clear right",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": [
+                  "(clear right | del)",
+                  "(wipe | delete) right",
+                  "clear right | rights delete"
+                ]
               },
               "edit.extend_line_up()\nedit.delete()": {
                 "spoken_form": "clear up",
-                "alternate_sopken_forms": ["<user.delete> up"]
+                "alternate_sopken_forms": [
+                  "(wipe | delete) up",
+                  "<user.delete> up"
+                ]
               },
               "edit.extend_line_down()\nedit.delete()": {
                 "spoken_form": "clear down",
-                "alternate_sopken_forms": ["<user.delete> down"]
+                "alternate_sopken_forms": [
+                  "(wipe | delete) down",
+                  "<user.delete> down"
+                ]
               },
               "edit.delete_word()": {
                 "spoken_form": "clear word",
-                "alternate_sopken_forms": ["<user.delete> word"]
+                "alternate_sopken_forms": [
+                  "(wipe | delete) word",
+                  "<user.delete> word"
+                ]
               },
               "edit.extend_word_left()\nedit.delete()": {
                 "spoken_form": "clear word left",
-                "alternate_sopken_forms": ["(clear word left | cleft)"]
+                "alternate_sopken_forms": [
+                  "(clear word left | cleft)",
+                  "clear word left | ash",
+                  "(wipe | delete) word left",
+                  "clear word left | befores delete",
+                  "clear (word (left | previous) | west)"
+                ]
               },
               "edit.extend_word_right()\nedit.delete()": {
                 "spoken_form": "clear word right",
-                "alternate_sopken_forms": ["(clear word right | cright)"]
+                "alternate_sopken_forms": [
+                  "(clear word right | cright)",
+                  "clear word right | fire",
+                  "(wipe | delete) word right",
+                  "clear word right | afters delete",
+                  "clear (word (right | next) | east)"
+                ]
               },
               "edit.extend_line_start()\nedit.delete()": {
                 "spoken_form": "clear way left",
-                "alternate_sopken_forms": ["<user.delete> head"]
+                "alternate_sopken_forms": [
+                  "(clear way left | dell lef)",
+                  "(wipe | delete) line start",
+                  "<user.delete> head"
+                ]
               },
               "edit.extend_line_end()\nedit.delete()": {
                 "spoken_form": "clear way right",
-                "alternate_sopken_forms": ["<user.delete> tail"]
+                "alternate_sopken_forms": [
+                  "(clear way right | dell rye)",
+                  "(wipe | delete) line end",
+                  "<user.delete> tail"
+                ]
               },
               "edit.extend_file_start()\nedit.delete()": {
                 "spoken_form": "clear way up",
-                "alternate_sopken_forms": ["<user.delete> way up"]
+                "alternate_sopken_forms": [
+                  "(wipe | delete) top",
+                  "<user.delete> way up"
+                ]
               },
               "edit.extend_file_end()\nedit.delete()": {
                 "spoken_form": "clear way down",
-                "alternate_sopken_forms": ["<user.delete> way down"]
+                "alternate_sopken_forms": [
+                  "(wipe | delete) bottom",
+                  "<user.delete> way down"
+                ]
               },
               "edit.select_all()\nedit.delete()": {
                 "spoken_form": "clear all",
-                "alternate_sopken_forms": ["<user.delete> all"]
+                "alternate_sopken_forms": [
+                  "(wipe | delete) all",
+                  "<user.delete> all"
+                ]
               },
               "edit.select_all()\nedit.copy()": {
                 "spoken_form": "copy all",
@@ -1516,11 +1723,13 @@
               },
               "user.copy_word_left()": {
                 "spoken_form": "copy word left",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": [
+                  "copy (word (left | previous) | west)"
+                ]
               },
               "user.copy_word_right()": {
                 "spoken_form": "copy word right",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["copy (word (right | next) | east)"]
               },
               "edit.select_line()\nedit.copy()": {
                 "spoken_form": "copy line",
@@ -1536,11 +1745,13 @@
               },
               "user.cut_word_left()": {
                 "spoken_form": "cut word left",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": [
+                  "cut (word (left | previous) | west)"
+                ]
               },
               "user.cut_word_right()": {
                 "spoken_form": "cut word right",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["cut (word (right | next) | east)"]
               },
               "user.cut_line()": {
                 "spoken_form": "cut line",
@@ -1580,35 +1791,46 @@
             "action": {
               "user.homophones_show(homophones_canonical)": {
                 "spoken_form": "phones <user.homophones_canonical>",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": [
+                  "[homo]phones <user.homophones_canonical>"
+                ]
               },
               "user.homophones_show_auto()": {
                 "spoken_form": "phones that",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["[homo]phones that", "phones it"]
               },
               "user.homophones_force_show(homophones_canonical)": {
                 "spoken_form": "phones force <user.homophones_canonical>",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": [
+                  "[homo]phones force <user.homophones_canonical>"
+                ]
               },
               "user.homophones_force_show_selection()": {
                 "spoken_form": "phones force",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["[homo]phones force"]
               },
               "user.homophones_hide()": {
                 "spoken_form": "phones hide",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": [
+                  "[homo]phones hide",
+                  "phones (hide | close)"
+                ]
               },
               "edit.select_word()\nuser.homophones_show_selection()": {
                 "spoken_form": "phones word",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["[homo]phones word"]
               },
               "n = ordinals or 1\nuser.words_left(n - 1)\nedit.extend_word_left()\nuser.homophones_show_selection()": {
                 "spoken_form": "phones [<user.ordinals>] word left",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": [
+                  "[homo]phones [<user.ordinals>] word left"
+                ]
               },
               "n = ordinals or 1\nuser.words_right(n - 1)\nedit.extend_word_right()\nuser.homophones_show_selection()": {
                 "spoken_form": "phones [<user.ordinals>] word right",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": [
+                  "[homo]phones [<user.ordinals>] word right"
+                ]
               }
             }
           }
@@ -1636,23 +1858,28 @@
             "action": {
               "app.window_open()": {
                 "spoken_form": "window (new | open)",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["(window | win) (new | open)"]
               },
               "app.window_next()": {
                 "spoken_form": "window next",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["(window | win) next"]
               },
               "app.window_previous()": {
                 "spoken_form": "window last",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": [
+                  "window (last | previous)",
+                  "(window | win) last"
+                ]
               },
               "app.window_close()": {
                 "spoken_form": "window close",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["(window | win) close"]
               },
               "user.switcher_focus(running_applications)": {
                 "spoken_form": "focus <user.running_applications>",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": [
+                  "(folk|focus) <user.running_applications>"
+                ]
               },
               "user.switcher_menu()": {
                 "spoken_form": "focus",
@@ -1664,7 +1891,7 @@
               },
               "user.switcher_hide_running()": {
                 "spoken_form": "running close",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["running [list] close"]
               },
               "user.switcher_launch(launch_applications)": {
                 "spoken_form": "launch <user.launch_applications>",
@@ -1680,7 +1907,7 @@
               },
               "user.move_window_previous_screen()": {
                 "spoken_form": "snap last [screen]",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["snap (last | previous) [screen]"]
               },
               "user.move_window_to_screen(number)": {
                 "spoken_form": "snap screen <number>",
@@ -1704,35 +1931,57 @@
             "action": {
               "app.tab_open()": {
                 "spoken_form": "tab (open | new)",
-                "alternate_sopken_forms": ["tab make"]
+                "alternate_sopken_forms": [
+                  "tab new here",
+                  "tab make",
+                  "tabby (open | new)"
+                ]
               },
               "app.tab_previous()": {
                 "spoken_form": "tab (last | previous)",
-                "alternate_sopken_forms": ["tab last"]
+                "alternate_sopken_forms": [
+                  "tab (last | previous | left)",
+                  "tab (last | previous) | tappy",
+                  "tab last",
+                  "tabby (last|left)"
+                ]
               },
               "app.tab_next()": {
                 "spoken_form": "tab next",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": [
+                  "tab (next | right)",
+                  "tabby (next|right)"
+                ]
               },
               "user.tab_close_wrapper()": {
                 "spoken_form": "tab close",
-                "alternate_sopken_forms": ["tab (close | delete)"]
+                "alternate_sopken_forms": [
+                  "tab (close | plus)",
+                  "ten (close | plus)"
+                ]
               },
               "app.tab_reopen()": {
                 "spoken_form": "tab (reopen | restore)",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["tabby reopen"]
               },
               "user.tab_jump(number)": {
                 "spoken_form": "go tab <number>",
-                "alternate_sopken_forms": ["tab <number>"]
+                "alternate_sopken_forms": ["tab <number>", "go tabby <number>"]
               },
               "user.tab_final()": {
                 "spoken_form": "go tab final",
-                "alternate_sopken_forms": ["tab final"]
+                "alternate_sopken_forms": [
+                  "tab final",
+                  "go tab (final | last)",
+                  "go tabby final"
+                ]
               },
               "user.tab_duplicate()": {
                 "spoken_form": "tab duplicate",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": [
+                  "tab (dupe | duplicate)",
+                  "tabby (duplicate)"
+                ]
               }
             }
           }
@@ -1753,7 +2002,10 @@
               "user.insert_formatted(letters, \"ALL_CAPS\")": {
                 "spoken_form": "(ship | uppercase) <user.letters> [(lowercase | sunk)]",
                 "alternate_sopken_forms": [
-                  "uppercase <user.letters> [(lowercase | sunk)]"
+                  "(ship | uppercase) <user.letters> [(sunk | lowercase | over)]",
+                  "uppercase <user.letters> [(lowercase | sunk)]",
+                  "(ship | uppercase | upper) <user.letters> [(lowercase | sunk)]",
+                  "(ship | uppercase) <user.letters> [(lowercase | sunk | over)]"
                 ]
               },
               "key(symbol_key)": {
@@ -1762,7 +2014,7 @@
               },
               "key(function_key)": {
                 "spoken_form": "<user.function_key>",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["press <user.function_key>"]
               },
               "key(special_key)": {
                 "spoken_form": "<user.special_key>",
@@ -1801,12 +2053,13 @@
                 "alternate_sopken_forms": [
                   "<user.format_text>",
                   "<user.format_text> halt",
-                  "strict <user.format_text>"
+                  "strict <user.format_text>",
+                  "<user.format_text>+ [over]"
                 ]
               },
               "user.formatters_reformat_selection(user.formatters)": {
                 "spoken_form": "<user.formatters> that",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["<user.formatters> selection"]
               },
               "user.add_phrase_to_history(word)\ninsert(word)": {
                 "spoken_form": "word <user.word>",
@@ -1838,11 +2091,15 @@
               },
               "user.clear_last_phrase()": {
                 "spoken_form": "nope that | scratch that",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": [
+                  "scratch that",
+                  "(nope | scratch) it",
+                  "(nope that | scratch that)"
+                ]
               },
               "user.formatters_reformat_last(formatters)": {
                 "spoken_form": "nope that was <user.formatters>",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["nope it was <user.formatters>"]
               }
             }
           }
@@ -1854,7 +2111,7 @@
             "action": {
               "\"{file_extension}\"": {
                 "spoken_form": "{user.file_extension}",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": ["dot {user.file_extension}"]
               }
             }
           }
@@ -2050,7 +2307,9 @@
               },
               "user.help_selected_context(help_contexts)": {
                 "spoken_form": "help context {user.help_contexts}",
-                "alternate_sopken_forms": []
+                "alternate_sopken_forms": [
+                  "help [context] {user.help_contexts}"
+                ]
               },
               "user.help_search(\"help\")": {
                 "spoken_form": "help help",
